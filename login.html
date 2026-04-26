@@ -830,6 +830,12 @@
         document.getElementById('errorMessage').classList.remove('show');
         document.getElementById('successMessage').classList.remove('show');
     });
+        function autenticar() {
+    // Aqui você faria a validação real (ex.: checar no banco)
+    // Se estiver correto:
+    localStorage.setItem("usuarioAutenticado", "true");
+    window.location.href = "https://gibatdic.github.io/seu-projeto/index.html";
+  }
 </script>
 </body>
 </html>

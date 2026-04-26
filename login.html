@@ -831,11 +831,17 @@
         document.getElementById('successMessage').classList.remove('show');
     });
         function autenticar() {
+    const email = document.getElementById("email").value; // pega o email digitado
+
     // Aqui você faria a validação real (ex.: checar no banco)
-    // Se estiver correto:
-    localStorage.setItem("usuarioAutenticado", "true");
-    window.location.href = "https://gibatdic.github.io/seu-projeto/index.html";
-  }
+    if (email) {
+        localStorage.setItem("usuarioAutenticado", "true");
+        localStorage.setItem("emailUsuario", email); // salva o email no navegador
+        window.location.href = "https://gibatdic.github.io/seu-projeto/index.html";
+    } else {
+        alert("Digite seu email e senha corretamente!");
+    }
+}
 </script>
 </body>
 </html>
